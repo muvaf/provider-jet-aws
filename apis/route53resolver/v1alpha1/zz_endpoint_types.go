@@ -32,6 +32,8 @@ type EndpointObservation struct {
 
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 
+	IPAddress []IPAddressObservation `json:"ipAddress,omitempty" tf:"ip_address,omitempty"`
+
 	TagsAll map[string]*string `json:"tagsAll,omitempty" tf:"tags_all,omitempty"`
 }
 

@@ -803,6 +803,13 @@ func (in *LBObservation) DeepCopyInto(out *LBObservation) {
 		*out = new(string)
 		**out = **in
 	}
+	if in.SubnetMapping != nil {
+		in, out := &in.SubnetMapping, &out.SubnetMapping
+		*out = make([]SubnetMappingObservation, len(*in))
+		for i := range *in {
+			(*in)[i].DeepCopyInto(&(*out)[i])
+		}
+	}
 	if in.TagsAll != nil {
 		in, out := &in.TagsAll, &out.TagsAll
 		*out = make(map[string]*string, len(*in))
