@@ -343,6 +343,15 @@ spec:
                     additionalProperties:
                       type: string
                     type: object
+                  vpcConfig:
+                    items:
+                      properties:
+                        clusterSecurityGroupId:
+                          type: string
+                        vpcId:
+                          type: string
+                      type: object
+                    type: array
                 type: object
               conditions:
                 description: Conditions of the resource.

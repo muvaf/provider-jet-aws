@@ -50,6 +50,8 @@ type ClusterObservation struct {
 	Status *string `json:"status,omitempty" tf:"status,omitempty"`
 
 	TagsAll map[string]*string `json:"tagsAll,omitempty" tf:"tags_all,omitempty"`
+
+	VPCConfig []VPCConfigObservation `json:"vpcConfig,omitempty" tf:"vpc_config,omitempty"`
 }
 
 type ClusterParameters struct {

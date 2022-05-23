@@ -56,6 +56,8 @@ type LBObservation struct {
 
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 
+	SubnetMapping []SubnetMappingObservation `json:"subnetMapping,omitempty" tf:"subnet_mapping,omitempty"`
+
 	TagsAll map[string]*string `json:"tagsAll,omitempty" tf:"tags_all,omitempty"`
 
 	VPCID *string `json:"vpcId,omitempty" tf:"vpc_id,omitempty"`

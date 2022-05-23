@@ -516,6 +516,13 @@ spec:
                 properties:
                   arn:
                     type: string
+                  ebsBlockDevice:
+                    items:
+                      properties:
+                        volumeId:
+                          type: string
+                      type: object
+                    type: array
                   id:
                     type: string
                   instanceState:
@@ -532,6 +539,15 @@ spec:
                     type: string
                   publicIp:
                     type: string
+                  rootBlockDevice:
+                    items:
+                      properties:
+                        deviceName:
+                          type: string
+                        volumeId:
+                          type: string
+                      type: object
+                    type: array
                   tagsAll:
                     additionalProperties:
                       type: string

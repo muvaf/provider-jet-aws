@@ -126,6 +126,8 @@ type EphemeralBlockDeviceParameters struct {
 type InstanceObservation struct {
 	Arn *string `json:"arn,omitempty" tf:"arn,omitempty"`
 
+	EBSBlockDevice []EBSBlockDeviceObservation `json:"ebsBlockDevice,omitempty" tf:"ebs_block_device,omitempty"`
+
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 
 	InstanceState *string `json:"instanceState,omitempty" tf:"instance_state,omitempty"`
@@ -141,6 +143,8 @@ type InstanceObservation struct {
 	PublicDNS *string `json:"publicDns,omitempty" tf:"public_dns,omitempty"`
 
 	PublicIP *string `json:"publicIp,omitempty" tf:"public_ip,omitempty"`
+
+	RootBlockDevice []RootBlockDeviceObservation `json:"rootBlockDevice,omitempty" tf:"root_block_device,omitempty"`
 
 	TagsAll map[string]*string `json:"tagsAll,omitempty" tf:"tags_all,omitempty"`
 }

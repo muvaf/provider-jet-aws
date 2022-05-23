@@ -256,6 +256,13 @@ func (in *EndpointObservation) DeepCopyInto(out *EndpointObservation) {
 		*out = new(string)
 		**out = **in
 	}
+	if in.IPAddress != nil {
+		in, out := &in.IPAddress, &out.IPAddress
+		*out = make([]IPAddressObservation, len(*in))
+		for i := range *in {
+			(*in)[i].DeepCopyInto(&(*out)[i])
+		}
+	}
 	if in.TagsAll != nil {
 		in, out := &in.TagsAll, &out.TagsAll
 		*out = make(map[string]*string, len(*in))

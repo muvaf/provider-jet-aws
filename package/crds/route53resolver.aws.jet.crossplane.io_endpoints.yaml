@@ -227,6 +227,13 @@ spec:
                     type: string
                   id:
                     type: string
+                  ipAddress:
+                    items:
+                      properties:
+                        ipId:
+                          type: string
+                      type: object
+                    type: array
                   tagsAll:
                     additionalProperties:
                       type: string

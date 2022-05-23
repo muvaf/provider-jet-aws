@@ -333,6 +333,13 @@ spec:
                     type: string
                   id:
                     type: string
+                  subnetMapping:
+                    items:
+                      properties:
+                        outpostId:
+                          type: string
+                      type: object
+                    type: array
                   tagsAll:
                     additionalProperties:
                       type: string

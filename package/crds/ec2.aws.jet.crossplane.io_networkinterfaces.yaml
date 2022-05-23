@@ -284,6 +284,13 @@ spec:
             properties:
               atProvider:
                 properties:
+                  attachment:
+                    items:
+                      properties:
+                        attachmentId:
+                          type: string
+                      type: object
+                    type: array
                   id:
                     type: string
                   macAddress:
